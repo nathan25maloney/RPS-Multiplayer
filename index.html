@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<title>RPSLS Multiplayer</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script
+		  src="https://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	<script src="assets/javascript/gameCode.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+<div class="jumbotron text-center">
+	<h3>Rock, Paper, Scissors, Lizard or Spock Game</h3>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-body">         
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group">
+				   <input type="text" class="form-control" id="name-input">
+				   <span class="input-group-btn">
+				        <button class="btn btn-default" id="new-player" type="button">Enter the Game</button>
+				   </span>
+				</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-default text-center" id="playerInterface1">
+				<h2><span id="player-1-name"></span></h2>
+				<h3>Wins: <span id="player-1-wins"></span></h3>
+				<h3>Loses: <span id="player-1-loses"></span></h3>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default text-center" id="playerInterface">
+				<h1 id="winner">someone wins here</h1>
+				
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default text-center" id="playerInterface2">
+				<h2><span id="player-2-name"></span></h2>
+				<h3>Wins: <span id="player-2-wins"></span></h3>
+				<h3>Loses: <span id="player-2-loses"></span></h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<button class="btn btn-default" id="Rock" type="button">Rock</button>
+			<button class="btn btn-default" id="Paper" type="button">Paper</button>
+			<button class="btn btn-default" id="Scissors" type="button">Scissors</button>
+			<button class="btn btn-default" id="Lizard" type="button">Lizard</button>
+			<button class="btn btn-default" id="Spock" type="button">Spock</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="text-box">
+				
+			</div>
+
+			<div class="panel panel-default">
+	          <div class="panel-body">         
+	            <form role="form">
+	              <div class="form-group">
+	                <div class="input-group">
+					   <input type="text" class="form-control" id="message-input">
+					   <span class="input-group-btn">
+					        <button class="btn btn-default" id="new-player" type="button">Send</button>
+					   </span>
+					</div>
+	              </div>
+	            </form>
+	          </div>
+	        </div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

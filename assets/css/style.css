@@ -1,0 +1,45 @@
+.jumbotron {
+	background-color: #848aa4;
+	color: #3a4468;
+}
+
+.container {
+	background-color: #a3a6c5;
+}
+body {
+	background-color: #a3a6c5;
+}
+
+.panel-body {
+	background-color: #716770;
+	border-color: #3a4468;
+}
+
+.panel-default {
+	border-color: #3a4468;
+
+}
+
+#playerInterface {
+	min-height: 200px;
+}
+
+#playerInterface1 {
+	min-height: 200px;
+}
+
+#playerInterface2 {
+	min-height: 200px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    margin-left: 18px;
+
+}
+
+.text-box {
+	margin-top: 100px;
+}
