@@ -76,8 +76,9 @@ $(function () {
 	e.preventDefault();
 	console.log("The button is working");
 	newPlayer();
+	$("#name-input").val("");
 	});
-	$("#name-input").keyup(function (e) {
+	$("#name-input").keypress(function (e) {
     if (e.keyCode == 13) {	
       e.preventDefault();
       $("#new-player").click();  
@@ -108,7 +109,7 @@ $(function () {
 
 	});
 
-  $("#usermsg").keyup(function (e) {
+  $("#usermsg").keypress(function (e) {
     if (e.keyCode == 13) {	
       e.preventDefault();
       $("#submitmsg").click();
@@ -116,7 +117,7 @@ $(function () {
     }
   });
 
-
+  
   messagesRef.limitToLast(10).on("child_added", function (snapshot) {
     var message = snapshot.val();
     $("<div/>").text(message.text).prepend($("<em/>")
@@ -175,6 +176,15 @@ window.onbeforeunload = function (event) {
 			loses: 0,
 			choice: ""
 			});
+			name = nameHolder;
+		    text = "Has left the game.";
+		    database.ref("chat").push({name:name, text:text});
+		    if(isPlayer2){
+		    	console.log("should remove chat");
+		    	database.ref("chat").remove();
+		    	database.ref().push("chat");
+		    }
+		    
 			
         } else if(amPlayer2){
         	database.ref("players").update({
@@ -187,6 +197,14 @@ window.onbeforeunload = function (event) {
 			loses: 0,
 			choice: ""
 			});
+			name = nameHolder;
+		    text = "Has left the game.";
+		    database.ref("chat").push({name:name, text:text});
+		    if(isPlayer1){
+		    	database.ref("chat").remove();
+		    	database.ref().push("chat");
+
+		    }
 
         }
     }
