@@ -13,6 +13,7 @@ body {
 .panel-body {
 	background-color: #716770;
 	border-color: #3a4468;
+	padding: 8px;
 }
 
 .panel-default {
@@ -36,7 +37,7 @@ body {
 .btn-default {
     color: #333;
     background-color: #fff;
-    border-color: #ccc;
+    border-color: #3a4468;
     margin-left: 18px;
 
 }
@@ -76,7 +77,7 @@ a {
     background: #fff;
     height: 270px;
     width: 430px;
-    border: 1px solid #ACD8F0;
+    border: 1px solid #3a4468;
     overflow: auto;
 }
 #usermsg {
@@ -97,4 +98,8 @@ a {
 
 em {
 	color: #fd8000;
+}
+
+.form-group {
+    margin-bottom: 3px;
 }
