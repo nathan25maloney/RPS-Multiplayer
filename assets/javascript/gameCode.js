@@ -27,7 +27,7 @@ var nameHolder;
 
 
 function newPlayer() {
-	if (isPlayer1) {
+	if (isPlayer1  && !amPlayer2) {
 		nameHolder = $("#name-input").val().trim();
 		console.log("should write new player", nameHolder);
 		database.ref("player1").update({
@@ -36,9 +36,10 @@ function newPlayer() {
 			loses: 0		
 		});
 		amPlayer1 = true;
+		
 
 
-	} else if (isPlayer2) {
+	} else if (isPlayer2 && !amPlayer1) {
 		nameHolder = $("#name-input").val().trim();
 		database.ref("player2").update({
 			name: nameHolder,
@@ -46,17 +47,18 @@ function newPlayer() {
 			loses: 0
 		});
 		amPlayer2 = true;
+
 		
 	} else {
 		console.log("you'll just have to wait");
 	}
 
-	if (isPlayer1){
+	if (isPlayer1  && !amPlayer2){
 		database.ref("players").update({
 			isPlayer1: false,
 			
 		})
-	} else if(isPlayer2){
+	} else if(isPlayer2 && !amPlayer1){
 		database.ref("players").update({
 			
 			isPlayer2: false
