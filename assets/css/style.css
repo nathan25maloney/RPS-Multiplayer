@@ -34,13 +34,6 @@ body {
 	min-height: 200px;
 }
 
-.btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #3a4468;
-    margin-left: 18px;
-
-}
 
 .text-box {
 	margin-top: 100px;
@@ -102,4 +95,25 @@ em {
 
 .form-group {
     margin-bottom: 3px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #3a4468;
+    margin-left: 6%;
+
+}
+
+
+@media (max-width: 1180px){
+.btn-default {
+    margin-left: 4%;
+}
+}
+
+@media (max-width: 980px){
+.btn-default {
+    margin-left: 8%;
+}
 }
