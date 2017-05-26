@@ -69,7 +69,7 @@ a {
     padding: 10px;
     background: #fff;
     height: 270px;
-    width: 430px;
+    width: 93%;
     border: 1px solid #3a4468;
     overflow: auto;
 }
@@ -106,7 +106,7 @@ em {
 }
 
 
-@media (max-width: 1180px){
+@media (max-width: 1200px){
 .btn-default {
     margin-left: 4%;
 }
@@ -115,5 +115,11 @@ em {
 @media (max-width: 980px){
 .btn-default {
     margin-left: 8%;
+}
+}
+
+@media (max-width: 625px){
+.btn-default {
+    margin: 1% 2% 3% 5%;
 }
 }
